@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+
+# OS / Editor
+.DS_Store
+.vscode/
+
+# Practice folders
+Practice/
+php template practice htmlcss/

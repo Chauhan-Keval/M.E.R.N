@@ -1,0 +1,16 @@
+.demo{
+    background-color: blue ;
+    border-radius: 8px;
+    text-align: center;
+}
+.demo h1 {
+    color: red;
+}
+.demo button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.demo button:hover{
+    background-color: blueviolet;
+}

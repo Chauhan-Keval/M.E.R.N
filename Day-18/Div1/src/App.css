@@ -1,0 +1,24 @@
+.A {
+  background-color: antiquewhite;
+  height: 500px;
+  width: 500px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+.a {
+  background-color: aquamarine;
+  height: 400px;
+  width: 400px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+.b {
+  background-color: azure;
+  height: 300px;
+  width: 300px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}

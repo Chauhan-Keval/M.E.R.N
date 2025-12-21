@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super</title>
+  </head>
+  <body>
+    <script>
+      class shape {
+        constructor(name) {
+          this.name = name;
+        }
+        move() {
+          document.write(`${this.name} moved`);
+        }
+      }
+      class cricle extends shape {
+        constructor(radius) {
+          super("Circle");
+          this.radius = radius;
+        }
+      }
+      var c = new cricle(5);
+      c.move();
+    </script>
+  </body>
+</html>

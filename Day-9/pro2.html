@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="disp()">Click here</button>
+    <div id="result"></div>
+    <script>
+      function disp() {
+        var a = prompt("Enter a value ");
+        var A = parseInt(a);
+        var sum = 0;
+        var i = 1;
+        var result = document.getElementById("result");
+        while (i <= A) {
+          sum = sum + i;
+          i = i + 1;
+        }
+        result.innerHTML = "The sum of Number is :" + sum;
+      }
+    </script>
+  </body>
+</html>

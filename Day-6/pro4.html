@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pro4.css" />
+  </head>
+  <body>
+    <div id="main">
+        <p>
+            <h3>Electirc Unit calculator</h3>
+        </p>
+        <button onclick="cal()">Click me</button>
+        <div id="result"></div>
+    </div>
+    <script> 
+        function cal(){
+            var a =prompt("Enter your units :");
+            var A = parseInt(a);
+            var result = document.getElementById("result");
+
+            if(A<=100 || A>=500){
+                if(A<=100){
+                    result.innerHTML="Your Bill is 250 Rs.";
+                }
+                else{
+                    var total = count_price_per_unit(A,10);
+                    result.innerHTML = "Your Bill is " + total + " Rs.";
+                }
+            }
+            else if(A>=100 && A>=200){
+                var total = count_price_per_unit(A,3);
+                result.innerHTML = "Your Bill is "+ total + " Rs.";
+
+            }
+            else if(A>=200 && A<300){
+                var total = count_price_per_unit(A,4);
+                result.innerHTML = "Your Bill is "+ total + " Rs.";
+            }
+            else if(A>=300 && A<400){
+                var total = count_price_per_unit(A,5);
+                result.innerHTML = "Your Bill is "+ total + " Rs.";
+            }
+            else if(A>=400 && A<500){
+                var total = count_price_per_unit(A,6);
+                result.innerHTML = "Your Bill is "+ total + " Rs.";
+            }
+            else{
+                result.innerHTML = "Invalid Value !" 
+            }
+        }
+        function count_price_per_unit(unit,price){
+            return (unit - 100) * price + 300;
+        }
+    </script>
+  </body>
+</html>

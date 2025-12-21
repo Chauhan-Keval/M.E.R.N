@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JavaScript Events</title>
+  </head>
+  <body
+    onload="pageReady()"
+    onscroll="scrolled()"
+    style="height: 2000px; padding: 20px"
+  >
+    <h2>1. Click</h2>
+    <button onclick="sayHello()">Click Me</button>
+
+    <h2>2. Double Click</h2>
+    <button ondblclick="doubleClicked()">Double Click Me</button>
+
+    <h2>3. Typing in Input (oninput)</h2>
+    <input oninput="showText(this)" placeholder="Type something" />
+
+    <h2>4. Change in Dropdown</h2>
+    <select onchange="showFruit(this)">
+      <option value="">--Choose--</option>
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+    </select>
+
+    <h2>5. Submit a Form</h2>
+    <form onsubmit="submitForm(event)">
+      <input placeholder="Your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>6. Focus and Blur</h2>
+    <input
+      onfocus="this.style.background='lightyellow'"
+      onblur="this.style.background='white'"
+      placeholder="Focus me"
+    />
+
+    <h2>7. Key Press</h2>
+    <input onkeydown="showKey(event)" placeholder="Press any key" />
+
+    <script>
+      function sayHello() {
+        alert("Hello! You clicked the button.");
+      }
+
+      function doubleClicked() {
+        alert("You double-clicked the button!");
+      }
+
+      function showText(inputBox) {
+        console.log("You typed: " + inputBox.value);
+      }
+
+      function showFruit(selectBox) {
+        alert("You selected: " + selectBox.value);
+      }
+
+      function submitForm(e) {
+        e.preventDefault(); // prevent form from refreshing the page
+        alert("Form submitted!");
+      }
+
+      function showKey(e) {
+        console.log("You pressed: " + e.key);
+      }
+
+      function pageReady() {
+        alert("Page is loaded!");
+      }
+
+      function scrolled() {
+        console.log("You are scrolling the page!");
+      }
+
+      // Window resize event
+      window.onresize = function () {
+        console.log("Window was resized!");
+      };
+    </script>
+  </body>
+</html>

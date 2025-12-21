@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrayt Odd and Even values</title>
+  </head>
+  <body>
+    <script>
+      const num = [];
+      var evencount = 0;
+      var oddcount = 0;
+      for (i = 0; i <= 9; i++) {
+        num[i] = parseInt(prompt("Enter a number :"));
+      }
+      for (i = 0; i <= 9; i++) {
+        if (num[i] % 2 == 0) {
+          evencount++;
+        } else {
+          oddcount++;
+        }
+      }
+      document.write(
+        "There are " + evencount + " Even number present in Array !<br>"
+      );
+      document.write(
+        "There are " + oddcount + " Odd number present in Array !"
+      );
+    </script>
+  </body>
+</html>

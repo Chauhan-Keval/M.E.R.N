@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taking value from form</title>
+  </head>
+  <body>
+    <form action="" name="MyForm" onclick="return(sum())">
+      <table border="1">
+        <tr>
+          <td align="right">Number 1 :</td>
+          <td><input type="number" name="num1" /></td>
+        </tr>
+        <tr>
+          <td align="right">Number 2 :</td>
+          <td><input type="number" name="num2" /></td>
+        </tr>
+        <tr>
+          <td align="right">Total</td>
+          <td><input type="number" name="num3" /></td>
+        </tr>
+        <tr>
+          <td align="center" colspan="2">
+            <input type="submit" value="Submit" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function sum() {
+        var result = document.getElementsByName("num3");
+        if (
+          document.MyForm.num1.value == "" ||
+          document.MyForm.num2.value == ""
+        ) {
+          if (document.MyForm.num1.value == "") {
+            alert("Enter value of number 1!");
+            document.MyForm.num1.focus();
+            return false;
+          }
+          if (document.MyForm.num2.value == "") {
+            alert("Enter value of number 2!");
+            document.MyForm.num2.focus();
+            return false;
+          }
+        } else {
+          var num1 = parseInt(document.MyForm.num1.value);
+          var num2 = parseInt(document.MyForm.num2.value);
+          var sum = num1 + num2;
+          document.MyForm.num3.value = sum;
+        }
+      }
+    </script>
+  </body>
+</html>

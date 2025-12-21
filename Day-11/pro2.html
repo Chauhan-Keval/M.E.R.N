@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function with array</title>
+  </head>
+  <body>
+    <script>
+      const array1 = [5, 4, 3, 2, 1];
+      const array2 = [3, 1, 5, 2, 4];
+      sort(array2);
+      function sort(array) {
+        var temp;
+        for (i = 0; i <= 4; i++) {
+          if (array[i] > array[i + 1]) {
+            temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = temp;
+            i = -1;
+          }
+        }
+        document.write(array);
+      }
+    </script>
+  </body>
+</html>

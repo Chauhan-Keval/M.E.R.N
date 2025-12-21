@@ -1,0 +1,39 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: bisque;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#main {
+  background-color: aliceblue;
+  height: 500px;
+  width: 250px;
+  text-align: center;
+  border-radius: 20px;
+  border: solid black;
+}
+#main button {
+  background-color: rgb(107, 180, 245);
+  border: 0;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 15px;
+}
+#main button:hover {
+  background-color: rgb(34, 223, 94);
+  color: white;
+}
+#result {
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px;
+}

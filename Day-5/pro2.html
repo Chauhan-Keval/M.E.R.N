@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Which number is greater</title>
+    <script type="text/javascript">
+      function comp() {
+        var A = prompt("Enter value of A:");
+        var B = prompt("Enter valur of B:");
+        if (parseInt(A) > parseInt(B)) {
+          document.write("A is Greater , value of A is :", A);
+        } else if (parseInt(A) == parseInt(B)) {
+          document.write("Value of A & B is equal =", A);
+        } else {
+          document.write("B is Greater , value of B  is :", B);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click the button to see which value is greater</p>
+    <form action="">
+      <input type="button" value="Click Me" onclick="comp()" />
+    </form>
+  </body>
+</html>

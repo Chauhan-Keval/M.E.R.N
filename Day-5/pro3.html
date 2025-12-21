@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Negative or positive</title>
+    <script type="text/javascript">
+      function comp() {
+        var A = prompt("Enter a vlaue :");
+        if (parseInt(A) > 0) {
+          document.write("Number is Positive!");
+        } else if (parseInt(A) == 0) {
+          document.write("Number is 0 !");
+        } else {
+          document.write("Number is Negative!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click the button to see whther number is postive or negative</p>
+    <form action="">
+      <input type="button" value="Click ME!" onclick="comp()" />
+    </form>
+  </body>
+</html>

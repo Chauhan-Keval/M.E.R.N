@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+  </head>
+  <body>
+    <!-- Make a class A and make a class B ,Class B extends to A ,make a object and pass 2 number and ,make a function in A that does Addition and prints in class B -->
+    <script>
+      class A {
+        constructor(num1, num2) {
+          this.num1 = num1;
+          this.num2 = num2;
+        }
+        AddValue() {
+          return this.num1 + this.num2;
+        }
+      }
+      class B extends A {
+        putValue() {
+          document.write(this.AddValue());
+        }
+      }
+      var obj = new B(10, 10);
+      obj.putValue();
+    </script>
+  </body>
+</html>

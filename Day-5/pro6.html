@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function comp() {
+        var a = prompt("Enter Value of A:");
+        var b = prompt("Enter Value of B:");
+        var c = prompt("Enter Value of C:");
+        var A = parseInt(a);
+        var B = parseInt(b);
+        var C = parseInt(c);
+        if (A >= B && A >= C) {
+          document.write("A is Greatest: ", A);
+        } else if (B >= A && B >= C) {
+          document.write("B is Greatest: ", B);
+        } else {
+          document.write("C is Greatest: ", C);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click to check the value of the three num</p>
+    <form action="">
+      <input type="button" value="Click me" onclick="comp()" />
+    </form>
+  </body>
+</html>

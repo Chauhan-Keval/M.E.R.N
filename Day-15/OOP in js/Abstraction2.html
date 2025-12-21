@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstraction</title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        constructor() {
+          if (new.target === Shape) {
+            throw new Error("Cannot instantiate abstract class 'Shape'");
+          }
+        }
+        area() {
+          throw new Error(
+            "Abstract method 'area' must be implemented by subclass"
+          );
+        }
+      }
+      class Circle extends Shape {
+        constructor(radius) {
+          super();
+          this.radius = radius;
+        }
+        area() {
+          return Math.PI * this.radius * this.radius;
+        }
+        perimeter() {
+          return 2 * Math.PI * this.radius;
+        }
+      }
+    </script>
+  </body>
+</html>

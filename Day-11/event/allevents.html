@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Simple JavaScript Events</title>
+  </head>
+  <body
+    onload="pageReady()"
+    onscroll="scrolled()"
+    style="height: 2000px; padding: 20px"
+  >
+    <h2>1. Click</h2>
+    <button onclick="sayHello()">Click Me</button>
+
+    <h2>2. Double Click</h2>
+    <button ondblclick="doubleClicked()">Double Click Me</button>
+
+    <h2>3. Typing (oninput)</h2>
+    <input type="text" oninput="showText(this)" placeholder="Type here" />
+
+    <h2>4. Change in Dropdown</h2>
+    <select onchange="showFruit(this)">
+      <option value="">--Choose--</option>
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+    </select>
+
+    <h2>5. Submit Form</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>6. Focus / Blur</h2>
+    <input
+      type="text"
+      onfocus="this.style.background='yellow'"
+      onblur="this.style.background='white'"
+      placeholder="Click here"
+    />
+
+    <h2>7. Key Press</h2>
+    <input type="text" onkeydown="showKey(event)" placeholder="Press any key" />
+
+    <h2>8. Mouse Over / Out</h2>
+    <p id="hoverText" onmouseover="mouseOver()" onmouseout="mouseOut()">
+      Hover over me!
+    </p>
+
+    <h2>9. Right Click</h2>
+    <p oncontextmenu="rightClick()">Right-click this text</p>
+
+    <h2>10. Copy / Cut / Paste</h2>
+    <input
+      type="text"
+      oncopy="copied()"
+      oncut="cutText()"
+      onpaste="pasted()"
+      placeholder="Try copy/cut/paste"
+    />
+
+    <h2>11. Checkbox Change</h2>
+    <label>
+      <input type="checkbox" onchange="checkboxChanged(this)" /> Accept terms
+    </label>
+
+    <h2>12. Drag and Drop</h2>
+    <div
+      id="dragMe"
+      draggable="true"
+      ondragstart="drag(event)"
+      style="width: 100px; height: 100px; background: orange"
+    >
+      Drag me
+    </div>
+    <div
+      id="dropHere"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      style="
+        width: 150px;
+        height: 150px;
+        background: lightblue;
+        margin-top: 10px;
+      "
+    >
+      Drop here
+    </div>
+
+    <script>
+      function sayHello() {
+        alert("Hello! You clicked the button.");
+      }
+
+      function doubleClicked() {
+        alert("Double-clicked!");
+      }
+
+      function showText(inputBox) {
+        console.log("Typed: " + inputBox.value);
+      }
+
+      function showFruit(selectBox) {
+        alert("You selected: " + selectBox.value);
+      }
+
+      function submitForm(e) {
+        e.preventDefault();
+        alert("Form submitted!");
+      }
+
+      function showKey(e) {
+        console.log("Key pressed: " + e.key);
+      }
+
+      function pageReady() {
+        alert("Page is loaded!");
+      }
+
+      function scrolled() {
+        console.log("Scrolling...");
+      }
+
+      function mouseOver() {
+        document.getElementById("hoverText").style.color = "red";
+      }
+
+      function mouseOut() {
+        document.getElementById("hoverText").style.color = "black";
+      }
+
+      function rightClick() {
+        alert("Right-click detected!");
+        return false;
+      }
+
+      function copied() {
+        alert("Copied!");
+      }
+
+      function cutText() {
+        alert("Cut!");
+      }
+
+      function pasted() {
+        alert("Pasted!");
+      }
+
+      function checkboxChanged(checkbox) {
+        if (checkbox.checked) {
+          alert("Checked ✅");
+        } else {
+          alert("Unchecked ❌");
+        }
+      }
+
+      function allowDrop(e) {
+        e.preventDefault();
+      }
+
+      function drag(e) {
+        e.dataTransfer.setData("text", e.target.id);
+      }
+
+      function drop(e) {
+        e.preventDefault();
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+      }
+
+      window.onresize = function () {
+        console.log("Window resized!");
+      };
+    </script>
+  </body>
+</html>

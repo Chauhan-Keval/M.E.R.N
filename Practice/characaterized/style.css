@@ -1,0 +1,158 @@
+body {
+  background: url(./images/img01.jpg);
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0%;
+  margin: 0%;
+}
+#header {
+  /* background-color: aquamarine; */
+  height: 20%;
+  width: 100%;
+  text-align: center;
+}
+#header h1 {
+  color: white;
+  padding-top: 50px;
+  font-size: 40px;
+  font-weight: normal;
+}
+#body {
+  /* background-color: antiquewhite; */
+  height: 150%;
+  width: 100%;
+}
+
+#left {
+  /* background-color: bisque; */
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+#center {
+  /* background-color: beige; */
+  height: 100%;
+  width: 60%;
+  float: left;
+}
+#nav_bar {
+  /* background-color: black; */
+  height: 50px;
+  width: 100%;
+}
+#menubar {
+  /* background-color: brown; */
+  height: 100%;
+  width: 60%;
+  float: left;
+  background: url(./images/img02.jpg);
+}
+#menubar ul {
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+#menubar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+#menubar a:hover {
+  text-decoration: underline;
+}
+#searchbar {
+  /* background-color: burlywood; */
+  height: 100%;
+  width: 40%;
+  float: right;
+  background: url(./images/img03.jpg);
+  background-repeat: no-repeat;
+}
+#searchbar form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 40px;
+  padding-top: 13px;
+}
+#searchbar button {
+  background-color: black;
+  color: white;
+  border: none;
+}
+#center_left {
+  background-color: blue;
+  height: 90%;
+  width: 60%;
+  float: left;
+  color: #8a8a8a;
+}
+#center_left h3 {
+  margin: 0%;
+  padding: 0%;
+  color: #ffffff;
+}
+#center_left_1 {
+  background-color: brown;
+  height: 25%;
+  width: 100%;
+}
+#center_left_1 img {
+  height: 100%;
+  width: 100%;
+}
+#center_left_2 {
+  background-color: burlywood;
+  height: 25%;
+  width: 100%;
+}
+#center_left_3 {
+  background-color: cadetblue;
+  height: 25%;
+  width: 100%;
+}
+#center_left_4 {
+  background-color: chartreuse;
+  height: 25%;
+  width: 100%;
+}
+#center_right {
+  background-color: blueviolet;
+  height: 90%;
+  width: 40%;
+  float: right;
+}
+#center_right h4 {
+  padding: 0%;
+  margin: 0%;
+  color: #ffffff;
+}
+#right {
+  /* background-color: azure; */
+  height: 100%;
+  width: 20%;
+  float: right;
+}
+#center_right_1 {
+  background-color: chocolate;
+  height: 10%;
+  width: 100%;
+}
+#center_right_2 {
+  background-color: coral;
+  height: 40%;
+  width: 100%;
+}
+#center_right_3 {
+  background-color: cornflowerblue;
+  height: 50%;
+  width: 100%;
+}
+#footer {
+  background-color: aqua;
+  height: 10%;
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find odd number from array</title>
+  </head>
+  <body>
+    <script>
+      const array1 = [1, 2, 3, 4, 5];
+      var count = 0;
+      function odd(array1) {
+        for (let i = 0; i < array1.length; i++) {
+          if (array1[i] % 2 != 0) {
+            count++;
+          }
+        }
+        document.writeln("Odd number in array are :" + count);
+      }
+      odd(array1);
+    </script>
+  </body>
+</html>

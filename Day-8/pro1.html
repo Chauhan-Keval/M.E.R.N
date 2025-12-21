@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="pri()">Click here</button>
+    <script>
+      function pri() {
+        var input_a = prompt("Enter Value of A ");
+        var input_b = prompt("Enter value of B ");
+        var A = parseInt(input_a);
+        var B = parseInt(input_b);
+        var sum = 0;
+        for (i = A; i <= B; i++) {
+          if (i % 2 == 0) {
+            document.write(i + "<br>");
+            sum = sum + i;
+          }
+        }
+        document.write("The sum of even numbers is :" + sum);
+      }
+    </script>
+  </body>
+</html>

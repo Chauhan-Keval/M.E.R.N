@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic validation</title>
+  </head>
+  <body>
+    <form
+      action="/cig-bin/test.cgi"
+      name="myForm"
+      onsubmit="return(validate());"
+    >
+      <table cellspacing="2" cellpading="2" border="1">
+        <tr>
+          <td align="right">Name</td>
+          <td><input type="text" name="Name" /></td>
+        </tr>
+        <tr>
+          <td align="right">E-Mail</td>
+          <td><input type="text" name="Email" /></td>
+        </tr>
+        <tr>
+          <td align="right">Zip code</td>
+          <td><input type="text" name="zip" /></td>
+        </tr>
+        <tr>
+          <td align="right">Country</td>
+          <td>
+            <select name="country">
+              <option value="-1">[Choose yours]</option>
+              <option value="1">USA</option>
+              <option value="2">Canada</option>
+              <option value="3">India</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="right"></td>
+          <td><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function validate() {
+        if (document.myForm.Name.value == "") {
+          alert("Please enter your name.");
+          document.myForm.Name.focus();
+          return false;
+        }
+        if (document.myForm.Email.value == "") {
+          alert("Please enter your name.");
+          document.myForm.Email.focus();
+          return false;
+        }
+        if (
+          document.myForm.zip.value == "" ||
+          isNaN(document.myForm.zip.value) ||
+          document.myForm.zip.value.length != 5
+        ) {
+          alert("Please enter your zip code.");
+          document.myForm.zip.focus();
+          return false;
+        }
+        if (document.myForm.country.value == "-1") {
+          alert("Please select your country.");
+          document.myForm.country.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

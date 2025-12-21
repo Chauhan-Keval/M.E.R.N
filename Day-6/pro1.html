@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function cal() {
+        var a = prompt("Enter Your Units :");
+        var A = parseInt(a);
+
+        if (A <= 100) {
+          document.write("Your Bill is 300 Rs.");
+        } else if (A >= 100 && A <= 200) {
+          var B = (A - 100) * 3;
+          var total = 300 + B;
+          document.write("Your Bill is : ", total);
+        } else if (A >= 200 && A <= 300) {
+          var B = (A - 100) * 4;
+          var total = 300 + B;
+          document.write("Your Bill is : ", total);
+        } else if (A >= 300 && A <= 500) {
+          var B = (A - 100) * 5;
+          var total = 300 + B;
+          document.write("Your Bill is : ", total);
+        } else if (A >= 500) {
+          var B = (A - 100) * 10;
+          var total = 300 + B;
+          document.write("Your Bill is : ", total);
+        } else {
+          document.write("Written invalid value!");
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0%;
+        padding: 0%;
+        background-color: aliceblue;
+        
+      }
+      #main {
+        background-color: antiquewhite;
+        height: 500px;
+        width: 250px;
+        border: solid black;
+        border-style: double;
+      }
+      #btn {
+        background-color: aqua;
+        border: 0;
+        border-radius: 10px;
+      }
+      #btn:hover {
+        background-color: rgb(78, 242, 57);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <p><h3>Electirc Unit Calculator</h3></p>
+      <form>
+        <input type="button" value="Click me" onclick="cal()" id="btn" />
+
+      </form>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>

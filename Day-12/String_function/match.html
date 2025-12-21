@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>match()</title>
+  </head>
+  <body>
+    <script>
+      var str = "For morw information ,see Chapeter 3.4.5.1";
+      var re = /(chapeter \d+(\.\d)*)/i;
+      var found = str.match(re);
+      document.write(found);
+    </script>
+  </body>
+</html>

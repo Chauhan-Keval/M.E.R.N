@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+        getArea() {
+          return this.width * this.height;
+        }
+        static compare(rect1, rect2) {
+          return rect1.getArea() - rect2.getArea();
+        }
+      }
+      var rect1 = new Rectangle(5, 8);
+      var rect2 = new Rectangle(6, 7);
+      document.write(Rectangle.compare(rect1, rect2));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymorphism</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        speak() {
+          document.write("Animal speaks");
+        }
+      }
+      class cat extends Animal {
+        speak() {
+          document.write("Mewo<br>");
+        }
+      }
+      class dog extends Animal {
+        speak() {
+          document.write("Woof<br>");
+        }
+      }
+      function MakeAnimalSpeak(animal) {
+        animal.speak();
+      }
+      MakeAnimalSpeak(new dog());
+      MakeAnimalSpeak(new cat());
+    </script>
+  </body>
+</html>

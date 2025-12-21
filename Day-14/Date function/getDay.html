@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getDay</title>
+  </head>
+  <body>
+    <script>
+      var dt = new Date("may 13 , 2005 23:15:00");
+      var Dt = new Date();
+      document.write("getDay() : " + dt.getDay());
+      document.write("<br>getDate() : " + dt.getDate());
+      document.write("<br>getFullYear() : " + dt.getFullYear());
+      document.write("<br>getHours() : " + dt.getHours());
+      document.write("<br>getYear() : " + Dt.getYear());
+      dt.setDate(15);
+      document.write("<br>setDate() : " + dt.getDate());
+      dt.setFullYear(2023);
+      document.write("<br>setFullYear() : " + dt.getFullYear());
+      dt.setHours(10);
+      document.write("<br>setHours() : " + dt.getHours());
+      dt.setMinutes(30);
+      document.write("<br>setMinutes() : " + dt.getMinutes());
+      dt.setSeconds(45);
+      document.write("<br>setSeconds() : " + dt.getSeconds());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+// Abstract class
+class Shape {
+  constructor() {
+    if (new.target === Shape) {
+      throw new Error("Cannot instantiate abstract class 'Shape'");
+    }
+  }
+
+  // Abstract method
+  area() {
+    throw new Error("Abstract method 'area' must be implemented by subclass");
+  }
+
+  // Abstract method
+  perimeter() {
+    throw new Error("Abstract method 'perimeter' must be implemented by subclass");
+  }
+}
+
+// Subclass 1: Circle
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  area() {
+    return Math.PI * this.radius * this.radius;
+  }
+
+  perimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+}
+
+// Subclass 2: Rectangle
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  area() {
+    return this.width * this.height;
+  }
+
+  perimeter() {
+    return 2 * (this.width + this.height);
+  }
+}
+
+// Example usage
+const circle = new Circle(5);
+console.log("Circle area:", circle.area());           // Circle area: 78.54...
+console.log("Circle perimeter:", circle.perimeter()); // Circle perimeter: 31.41...
+
+const rectangle = new Rectangle(4, 6);
+console.log("Rectangle area:", rectangle.area());           // Rectangle area: 24
+console.log("Rectangle perimeter:", rectangle.perimeter()); // Rectangle perimeter: 20
+
+// const shape = new Shape(); // ❌ Error: Cannot instantiate abstract class 'Shape'
